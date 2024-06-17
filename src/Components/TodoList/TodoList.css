@@ -1,0 +1,141 @@
+.todo-list {
+  width: 100%;
+  margin: 15px auto;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.todo-items {
+  width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.note {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #6C63FF;
+  padding: 10px 0;
+  margin-top: 5px;
+}
+
+.note input[type="checkbox"] {
+  display: none;
+}
+
+
+
+.note .custom-checkbox {
+    width: 20px;
+    height: 20px;
+    border: 2px solid #6C63FF;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: transparent;
+    position: relative;
+}
+
+
+.note .custom-checkbox::after {
+  content: '';
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.note input[type="checkbox"]:checked + .custom-checkbox {
+  background-color: #6C63FF;
+  border: 2px solid #6C63FF;
+}
+
+
+.note input[type="checkbox"]:checked + .custom-checkbox::after {
+  display: block;
+}
+
+
+
+
+.note-content {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  flex-grow: 1;
+}
+
+.note-content input[type="text"] {
+  background-color: transparent;
+  border: none;
+  color: black;
+  padding: 5px;
+  margin-right: 10px;
+  flex-grow: 1;
+}
+
+.note-content input[type="text"]:focus {
+  outline: none;
+}
+
+.note-content span {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.note .completed {
+  text-decoration: line-through;
+  color: #6d6d72;
+}
+
+.note .btns {
+  display: flex;
+  align-items: center;
+}
+
+.note:hover .btns button {
+  visibility: visible;
+}
+
+.btns button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  visibility: hidden;
+  padding: 0 5px;
+}
+
+
+
+.error {
+  color: red;
+  margin-top: 10px;
+}
+
+
+.empty-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+  padding: 20px 0;
+}
+
+.empty-message p{
+  font-weight: bold;
+  color: black;
+}
+
+.btns button{
+  border: none;
+  background-color: transparent;
+  cursor:pointer;
+  visibility: hidden;
+}
